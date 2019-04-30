@@ -1,0 +1,14 @@
+<section class="tweets-feed">
+  <section class="tweets-feed-form">
+    <h1>Welcome <%= current_user.username %>!</h1>
+    <%= render 'tweets/form' %>
+  </section>
+  <section class="tweets-feed-display">
+    <b>Your Feed!</b>
+    <div class="infinite-tweets">
+      <ul id="feed">
+      </ul>
+      <button class="fetch-tweets">fetch more</button>
+    </div>
+  </section>
+</section>

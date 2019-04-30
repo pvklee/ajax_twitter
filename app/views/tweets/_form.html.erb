@@ -1,0 +1,19 @@
+<h2>New Tweet!</h2>
+<form data-tweets-ul="#feed" class = "tweet-compose" action="/tweets" method="POST">
+  <input
+      type="hidden"
+      name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+
+  <label for="tweet-textarea">What's on your mind?</label>
+  <textarea id="tweet-textarea" name="tweet[content]" placeholder="write your tweet!"></textarea>
+  <strong class="chars-left"></strong>
+
+  <ul class="mentioned-users"></ul>
+
+  <ul class ="tweet-actions">
+    <li><button class="add-mentioned-user">Add Mention</button></li>
+    <li><input type="Submit" value="Post Tweet!"></li>
+  </ul>
+
+</form>
